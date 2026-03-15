@@ -1,26 +1,391 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --font-display: 'Anton', Impact, sans-serif;
+  --font-heading: 'Oswald', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'Courier Prime', Courier New, monospace;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #040d08;
+  color: #f0faf4;
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+/* ===== COURT BACKGROUND PATTERN ===== */
+.court-bg {
+  background-color: #071a0e;
+  background-image:
+    linear-gradient(rgba(26,71,42,0.15) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(26,71,42,0.15) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* ===== LED SCOREBOARD TEXT ===== */
+.led-text {
+  font-family: var(--font-mono);
+  color: #ff6b35;
+  text-shadow: 0 0 10px rgba(255,107,53,0.8), 0 0 20px rgba(255,107,53,0.4);
+  letter-spacing: 0.08em;
+}
+
+.led-green {
+  color: #22c55e;
+  text-shadow: 0 0 10px rgba(34,197,94,0.8), 0 0 20px rgba(34,197,94,0.4);
+}
+
+.led-gold {
+  color: #f59e0b;
+  text-shadow: 0 0 10px rgba(245,158,11,0.8), 0 0 20px rgba(245,158,11,0.4);
+}
+
+/* ===== GLASS CARD ===== */
+.glass-card {
+  background: rgba(13, 43, 24, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(82, 183, 136, 0.2);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.5), inset 0 1px 0 rgba(82,183,136,0.1);
+}
+
+.glass-card-gold {
+  background: rgba(20, 15, 5, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(245,158,11,0.3);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.5), inset 0 1px 0 rgba(245,158,11,0.15), 0 0 40px rgba(245,158,11,0.08);
+}
+
+/* ===== COURT LINE DECORATIONS ===== */
+.court-line {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #2d6a4f, transparent);
+}
+
+.court-line-full {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #52b788, #2d6a4f, #52b788, transparent);
+}
+
+/* ===== SPORT TICKER ===== */
+.ticker-wrapper {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.ticker-content {
+  display: inline-block;
+  animation: ledScroll 35s linear infinite;
+}
+
+@keyframes ledScroll {
+  0%   { transform: translateX(100vw); }
+  100% { transform: translateX(-100%); }
+}
+
+/* ===== ATHLETE PASS ===== */
+.athlete-pass {
+  background: linear-gradient(135deg, #071a0e 0%, #0d2b18 40%, #1a472a 100%);
+  border: 2px solid rgba(245,158,11,0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.athlete-pass::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; height: 4px;
+  background: linear-gradient(90deg, #f59e0b, #fcd34d, #f59e0b);
+}
+
+.athlete-pass::after {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%) rotate(-30deg);
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(ellipse at center, rgba(245,158,11,0.04) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+/* ===== PHOTO ALBUM ===== */
+.page-flip-enter {
+  animation: flipPage 0.6s ease-in-out forwards;
+}
+
+@keyframes flipPage {
+  0%   { transform: perspective(1200px) rotateY(-90deg); opacity: 0; }
+  100% { transform: perspective(1200px) rotateY(0deg);   opacity: 1; }
+}
+
+/* ===== SCORE DISPLAY ===== */
+.score-digit {
+  font-family: var(--font-mono);
+  background: #0a0a0a;
+  border: 1px solid #1a472a;
+  color: #ff6b35;
+  text-shadow: 0 0 10px rgba(255,107,53,0.6);
+  padding: 0.1em 0.3em;
+  min-width: 1.5ch;
+  text-align: center;
+  display: inline-block;
+}
+
+/* ===== COUNTDOWN DIGITS ===== */
+.countdown-digit {
+  font-family: var(--font-mono);
+  background: linear-gradient(180deg, #0d2b18 0%, #071a0e 100%);
+  border: 1px solid #2d6a4f;
+  box-shadow: 0 0 20px rgba(82,183,136,0.15), inset 0 1px 0 rgba(82,183,136,0.1);
+  color: #52b788;
+  text-shadow: 0 0 15px rgba(82,183,136,0.6);
+}
+
+/* ===== NAV ===== */
+.nav-blur {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  background: rgba(4, 13, 8, 0.85);
+  border-bottom: 1px solid rgba(26,71,42,0.5);
+}
+
+/* ===== GUESTBOOK FORM ===== */
+.court-input {
+  background: rgba(13,43,24,0.6);
+  border: 1px solid rgba(82,183,136,0.25);
+  color: #f0faf4;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.court-input:focus {
+  outline: none;
+  border-color: rgba(82,183,136,0.6);
+  box-shadow: 0 0 0 3px rgba(82,183,136,0.1);
+}
+
+.court-input::placeholder {
+  color: rgba(148,210,173,0.4);
+}
+
+/* ===== BUTTON STYLES ===== */
+.btn-gold {
+  background: linear-gradient(135deg, #d97706, #f59e0b, #fbbf24);
+  color: #040d08;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: all 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-gold::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 100%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
+  transition: left 0.4s;
+}
+
+.btn-gold:hover::after {
+  left: 100%;
+}
+
+.btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(245,158,11,0.4);
+}
+
+.btn-gold:active {
+  transform: translateY(0);
+}
+
+.btn-court {
+  background: transparent;
+  border: 2px solid #52b788;
+  color: #52b788;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: all 0.2s;
+}
+
+.btn-court:hover {
+  background: rgba(82,183,136,0.15);
+  border-color: #74c69d;
+  color: #74c69d;
+}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #040d08;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1a472a;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2d6a4f;
+}
+
+/* ===== SELECTION ===== */
+::selection {
+  background: rgba(82,183,136,0.3);
+  color: #f0faf4;
+}
+
+/* ===== UTILITY ===== */
+.text-gradient-gold {
+  background: linear-gradient(135deg, #d97706, #f59e0b, #fcd34d);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-green {
+  background: linear-gradient(135deg, #52b788, #74c69d, #95d5b2);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ===== RESPONSIVE TYPOGRAPHY ===== */
+.display-xl {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 10vw, 8rem);
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+}
+
+.display-lg {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 7vw, 5.5rem);
+  line-height: 1;
+}
+
+.display-md {
+  font-family: var(--font-heading);
+  font-size: clamp(1.2rem, 4vw, 2.5rem);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+/* ===== SECTION SPACING ===== */
+.section-pad {
+  padding: 5rem 1rem;
+}
+
+@media (min-width: 768px) {
+  .section-pad {
+    padding: 7rem 2rem;
+  }
+}
+
+/* ===== LIVE BROADCAST BADGE ===== */
+.live-badge {
+  background: #ef4444;
+  color: white;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  padding: 2px 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.live-dot {
+  width: 6px;
+  height: 6px;
+  background: white;
+  border-radius: 50%;
+  animation: liveDot 1.5s ease-in-out infinite;
+}
+
+@keyframes liveDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.2; transform: scale(0.5); }
+}
+
+/* ===== MUSIC PLAYER ===== */
+.music-btn {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1a472a, #2d6a4f);
+  border: 2px solid rgba(82,183,136,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
+.music-btn:hover {
+  transform: scale(1.1);
+  border-color: rgba(82,183,136,0.7);
+  box-shadow: 0 0 20px rgba(82,183,136,0.2);
+}
+
+/* ===== SECTION DIVIDER WITH SHUTTLECOCK ===== */
+.shuttle-divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0 auto;
+}
+
+.shuttle-divider::before,
+.shuttle-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(82,183,136,0.4));
+}
+
+.shuttle-divider::after {
+  background: linear-gradient(270deg, transparent, rgba(82,183,136,0.4));
+}
+
+/* ===== STORY TIMELINE ===== */
+.timeline-connector {
+  width: 2px;
+  background: linear-gradient(180deg, #1a472a, #2d6a4f, #1a472a);
+  margin: 0 auto;
+}
+
+/* ===== NAV MUSIC BAR ===== */
+@keyframes navMusicBar {
+  from { height: 4px; }
+  to   { height: 12px; }
+}
+
+/* ===== RESPONSIVE HIDE ===== */
+@media (max-width: 640px) {
+  .hide-mobile {
+    display: none;
+  }
 }
