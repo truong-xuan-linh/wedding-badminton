@@ -92,7 +92,7 @@ const config: Config = {
           '100%': { transform: 'translateX(-100%)' },
         },
         pulseLed: {
-          '0%, 100%': { opacity: '1', boxShadow: '0 0 8px #f59e0b' },
+          '0%, 100%': { opacity: '1', boxShadow: '0 0 11px #f59e0b' },
           '50%': { opacity: '0.4', boxShadow: '0 0 2px #f59e0b' },
         },
         float: {
@@ -148,7 +148,7 @@ const config: Config = {
         'court': '0 0 40px rgba(82,183,136,0.15), inset 0 1px 0 rgba(82,183,136,0.1)',
         'gold': '0 0 30px rgba(245,158,11,0.3)',
         'led': '0 0 20px rgba(255,107,53,0.4)',
-        'card': '0 8px 32px rgba(0,0,0,0.5), inset 0 1px 0 rgba(82,183,136,0.15)',
+        'card': '0 11px 32px rgba(0,0,0,0.5), inset 0 1px 0 rgba(82,183,136,0.15)',
         'glow-green': '0 0 20px rgba(52,183,136,0.3)',
       },
     },

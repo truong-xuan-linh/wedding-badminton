@@ -92,7 +92,7 @@ export default function WeddingDetails() {
           <div className="flex items-center gap-3">
             <ShuttlecockSVG size={28} color="#f59e0b" />
             <div>
-              <div className="font-mono text-[9px] tracking-widest text-white/40 uppercase">Ngày Cưới</div>
+              <div className="font-mono text-[13px] tracking-widest text-white/40 uppercase">Ngày Cưới</div>
               <div className="font-heading font-bold text-xl uppercase tracking-wider" style={{ color: '#fcd34d' }}>
                 {wedding.dateDisplay}
               </div>
@@ -169,7 +169,7 @@ function EventCard({
           {/* Left: Time column */}
           <div className="flex-shrink-0 text-center"
             style={{ minWidth: 70 }}>
-            <div className="font-mono text-[8px] tracking-widest text-white/25 uppercase mb-0.5">Giờ</div>
+            <div className="font-mono text-[11px] tracking-widest text-white/25 uppercase mb-0.5">Giờ</div>
             <div className="font-mono font-bold text-sm led-text">{event.time}</div>
           </div>
 
@@ -180,7 +180,7 @@ function EventCard({
           {/* Center: Event info */}
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-2 mb-0.5">
-              <div className="px-2 py-0.5 font-mono text-[8px] tracking-[0.2em] uppercase"
+              <div className="px-2 py-0.5 font-mono text-[11px] tracking-[0.2em] uppercase"
                 style={{ background: `${event.color}20`, border: `1px solid ${event.color}40`, color: event.color }}>
                 {event.tag}
               </div>
@@ -245,7 +245,7 @@ function EventCard({
 function InfoRow({ label, value, color }: { label: string; value: string; color: string }) {
   return (
     <div className="mb-2">
-      <div className="font-mono text-[8px] tracking-widest uppercase mb-0.5"
+      <div className="font-mono text-[11px] tracking-widest uppercase mb-0.5"
         style={{ color: `${color}80` }}>
         {label}
       </div>

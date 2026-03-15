@@ -4,7 +4,7 @@
   --font-display: 'Anton', Impact, sans-serif;
   --font-heading: 'Oswald', sans-serif;
   --font-body: 'Inter', sans-serif;
-  --font-mono: 'Courier Prime', Courier New, monospace;
+  --font-mono: 'IBM Plex Mono', 'Courier New', monospace;
 }
 
 * {
@@ -56,14 +56,14 @@ body {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(82, 183, 136, 0.2);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.5), inset 0 1px 0 rgba(82,183,136,0.1);
+  box-shadow: 0 11px 32px rgba(0,0,0,0.5), inset 0 1px 0 rgba(82,183,136,0.1);
 }
 
 .glass-card-gold {
   background: rgba(20, 15, 5, 0.8);
   backdrop-filter: blur(12px);
   border: 1px solid rgba(245,158,11,0.3);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.5), inset 0 1px 0 rgba(245,158,11,0.15), 0 0 40px rgba(245,158,11,0.08);
+  box-shadow: 0 11px 32px rgba(0,0,0,0.5), inset 0 1px 0 rgba(245,158,11,0.15), 0 0 40px rgba(245,158,11,0.08);
 }
 
 /* ===== COURT LINE DECORATIONS ===== */
@@ -310,7 +310,7 @@ body {
   font-size: 0.65rem;
   font-weight: 700;
   letter-spacing: 0.15em;
-  padding: 2px 8px;
+  padding: 2px 11px;
   display: inline-flex;
   align-items: center;
   gap: 5px;

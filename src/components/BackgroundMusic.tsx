@@ -103,7 +103,7 @@ const BackgroundMusic = forwardRef<BackgroundMusicHandle>((_, ref) => {
               </motion.div>
               <div>
                 <div className="font-heading font-semibold text-xs text-white truncate">{TRACK.title}</div>
-                <div className="font-mono text-[9px] text-white/40 truncate">{TRACK.artist}</div>
+                <div className="font-mono text-[13px] text-white/40 truncate">{TRACK.artist}</div>
               </div>
             </div>
 
@@ -117,8 +117,8 @@ const BackgroundMusic = forwardRef<BackgroundMusicHandle>((_, ref) => {
                 />
               </div>
               <div className="flex justify-between mt-1">
-                <span className="font-mono text-[8px] text-white/30">{formatTime(currentTime)}</span>
-                <span className="font-mono text-[8px] text-white/30">{formatTime(duration)}</span>
+                <span className="font-mono text-[11px] text-white/30">{formatTime(currentTime)}</span>
+                <span className="font-mono text-[11px] text-white/30">{formatTime(duration)}</span>
               </div>
             </div>
 

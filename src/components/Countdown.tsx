@@ -154,7 +154,7 @@ export default function Countdown() {
                       style={{ borderColor: 'rgba(82,183,136,0.3)' }} />
                   </div>
                   {/* Label */}
-                  <div className="mt-2 font-mono text-[9px] md:text-[10px] tracking-[0.3em] text-white/35 uppercase">
+                  <div className="mt-2 font-mono text-[13px] md:text-[10px] tracking-[0.3em] text-white/35 uppercase">
                     {item.label}
                   </div>
                 </motion.div>
@@ -168,7 +168,7 @@ export default function Countdown() {
               transition={{ delay: 0.6 }}
               className="mt-10 flex items-center justify-center gap-3"
             >
-              <div className="font-mono text-[9px] tracking-widest text-white/30">SETS</div>
+              <div className="font-mono text-[13px] tracking-widest text-white/30">SETS</div>
               {['LOVE', '15', '30', '40', 'GAME'].map((point, i) => (
                 <div key={point} className="flex flex-col items-center gap-1">
                   <div

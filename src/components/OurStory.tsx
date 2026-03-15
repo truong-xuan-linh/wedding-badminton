@@ -139,7 +139,7 @@ function StoryCard({
         <div className="glass-card p-5 md:p-7 hover:border-court-light/40 transition-all duration-300 group">
           {/* Event badge */}
           <div className="flex items-center gap-2 mb-3">
-            <div className="px-2 py-0.5 font-mono text-[8px] tracking-[0.3em] uppercase font-bold"
+            <div className="px-2 py-0.5 font-mono text-[11px] tracking-[0.3em] uppercase font-bold"
               style={{ background: `${color}25`, border: `1px solid ${color}60`, color }}>
               {item.event}
             </div>

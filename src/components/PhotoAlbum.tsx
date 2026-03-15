@@ -164,20 +164,20 @@ export default function PhotoAlbum() {
                           <div className="font-mono text-[10px] tracking-widest text-court-light uppercase">
                             {photo.caption}
                           </div>
-                          <div className="font-mono text-[8px] text-white/50 mt-1">
+                          <div className="font-mono text-[11px] text-white/50 mt-1">
                             Tap to view
                           </div>
                         </div>
                       </div>
                       {/* Number tag */}
-                      <div className="absolute top-1 right-1 w-5 h-5 flex items-center justify-center text-[8px] font-mono"
+                      <div className="absolute top-1 right-1 w-5 h-5 flex items-center justify-center text-[11px] font-mono"
                         style={{ background: 'rgba(245,158,11,0.85)', color: '#040d08' }}>
                         {photo.id}
                       </div>
                     </div>
                     {/* Caption */}
                     <div className="pt-1.5 px-0.5">
-                      <div className="font-mono text-[9px] tracking-wider text-white/40 truncate">
+                      <div className="font-body text-[11px] tracking-wide text-white/60 truncate">
                         {photo.caption}
                       </div>
                     </div>
@@ -301,7 +301,7 @@ function Lightbox({
           <div className="font-mono text-[10px] tracking-[0.3em] uppercase text-court-light">
             {photo.caption}
           </div>
-          <div className="font-mono text-[9px] text-white/30 mt-1">
+          <div className="font-mono text-[13px] text-white/30 mt-1">
             {index + 1} / {photos.length}
           </div>
         </div>

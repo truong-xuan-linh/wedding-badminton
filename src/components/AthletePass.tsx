@@ -75,7 +75,7 @@ export default function AthletePass({ guestName }: AthletePassProps) {
             {/* Header */}
             <div className="flex items-start justify-between mb-6">
               <div>
-                <div className="font-mono text-[9px] tracking-[0.4em] uppercase mb-1"
+                <div className="font-mono text-[13px] tracking-[0.4em] uppercase mb-1"
                   style={{ color: 'rgba(245,158,11,0.6)' }}>
                   The Championship Match 2026
                 </div>
@@ -97,8 +97,9 @@ export default function AthletePass({ guestName }: AthletePassProps) {
                   <Image
                     src="/4.webp"
                     alt="Guest pass photo"
-                    width={80}
-                    height={96}
+                    width={160}
+                    height={192}
+                    quality={90}
                     className="w-full h-full object-cover object-top"
                   />
                   {/* Badge overlay */}
@@ -113,7 +114,7 @@ export default function AthletePass({ guestName }: AthletePassProps) {
               <div className="flex-1 min-w-0">
                 {/* Guest name */}
                 <div className="mb-1">
-                  <div className="font-mono text-[9px] tracking-widest uppercase mb-1"
+                  <div className="font-mono text-[13px] tracking-widest uppercase mb-1"
                     style={{ color: 'rgba(148,210,173,0.5)' }}>
                     Kính Gửi
                   </div>
@@ -134,11 +135,11 @@ export default function AthletePass({ guestName }: AthletePassProps) {
 
                 {/* Access level */}
                 <div className="mt-3 flex items-center gap-2">
-                  <div className="px-2 py-0.5 font-mono text-[9px] tracking-widest uppercase"
+                  <div className="px-2 py-0.5 font-mono text-[13px] tracking-widest uppercase"
                     style={{ background: 'rgba(245,158,11,0.2)', border: '1px solid rgba(245,158,11,0.4)', color: '#fcd34d' }}>
                     VIP ACCESS
                   </div>
-                  <div className="px-2 py-0.5 font-mono text-[9px] tracking-widest uppercase"
+                  <div className="px-2 py-0.5 font-mono text-[13px] tracking-widest uppercase"
                     style={{ background: 'rgba(82,183,136,0.1)', border: '1px solid rgba(82,183,136,0.3)', color: '#52b788' }}>
                     ALL AREAS
                   </div>
@@ -146,11 +147,11 @@ export default function AthletePass({ guestName }: AthletePassProps) {
 
                 {/* Event */}
                 <div className="mt-3">
-                  <div className="font-mono text-[9px] text-white/30 tracking-wider">SỰ KIỆN</div>
+                  <div className="font-mono text-[13px] text-white/30 tracking-wider">SỰ KIỆN</div>
                   <div className="font-heading text-sm font-semibold text-white/80 tracking-wider">
                     Lễ Cưới Minh Khoa & Thanh Vy
                   </div>
-                  <div className="font-mono text-[9px] tracking-wider mt-0.5 text-court-light/60">
+                  <div className="font-mono text-[13px] tracking-wider mt-0.5 text-court-light/60">
                     18.04.2026 · White Palace · TP.HCM
                   </div>
                 </div>
@@ -163,7 +164,7 @@ export default function AthletePass({ guestName }: AthletePassProps) {
             {/* Bottom info & barcode */}
             <div className="flex items-end justify-between gap-4">
               <div>
-                <div className="font-mono text-[9px] text-white/30 tracking-wider mb-1">GHI CHÚ</div>
+                <div className="font-mono text-[13px] text-white/30 tracking-wider mb-1">GHI CHÚ</div>
                 <div className="font-body text-xs text-white/50 italic leading-relaxed">
                   "Chúng tôi rất trân trọng sự hiện diện<br />
                   của bạn trong ngày trọng đại nhất."

@@ -154,7 +154,7 @@ export default function ShuttlecockMinigame() {
             </div>
 
             {/* "YOUR SIDE" label top */}
-            <div className="absolute top-2 left-1/2 -translate-x-1/2 font-mono text-[8px] tracking-widest text-white/20 uppercase">
+            <div className="absolute top-2 left-1/2 -translate-x-1/2 font-mono text-[11px] tracking-widest text-white/20 uppercase">
               Court 1 · Final Match
             </div>
 
@@ -292,7 +292,7 @@ function VenueCard({
                 </motion.div>
               )}
 
-              <div className="font-mono text-[8px] md:text-[9px] tracking-[0.25em] uppercase text-center mb-1"
+              <div className="font-mono text-[11px] md:text-[13px] tracking-[0.25em] uppercase text-center mb-1"
                 style={{ color: venue.color }}>
                 {venue.label}
               </div>
@@ -334,7 +334,7 @@ function VenueCard({
               </div>
 
               <div className="text-base text-center mb-2">{venue.icon}</div>
-              <div className="font-mono text-[7px] md:text-[8px] tracking-[0.2em] uppercase text-center mb-2"
+              <div className="font-mono text-[7px] md:text-[11px] tracking-[0.2em] uppercase text-center mb-2"
                 style={{ color: venue.color }}>
                 {venue.label}
               </div>
@@ -346,7 +346,7 @@ function VenueCard({
               {venue.revealInfo.map((info) => (
                 <div key={info.label} className="mb-1 text-center">
                   <div className="font-mono text-[7px] tracking-wider text-white/30 uppercase">{info.label}</div>
-                  <div className="font-mono text-[8px] tracking-wide text-white/65 leading-tight">{info.value}</div>
+                  <div className="font-mono text-[11px] tracking-wide text-white/65 leading-tight">{info.value}</div>
                 </div>
               ))}
             </div>
@@ -375,7 +375,7 @@ function LauncherArea({
       transition={{ delay: 0.8 }}
       className="flex flex-col items-center gap-2"
     >
-      <div className="font-mono text-[8px] tracking-widest text-white/25 uppercase">
+      <div className="font-mono text-[11px] tracking-widest text-white/25 uppercase">
         ↑ Bấm từng ô hoặc ↓
       </div>
       <button

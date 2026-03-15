@@ -111,7 +111,7 @@ export default function Guestbook() {
             {/* Label */}
             <div className="absolute left-0 top-0 bottom-0 flex items-center px-2 z-10"
               style={{ background: '#ff6b35', minWidth: 'auto' }}>
-              <div className="font-mono text-[8px] tracking-widest text-court-dark font-bold uppercase whitespace-nowrap"
+              <div className="font-mono text-[11px] tracking-widest text-court-dark font-bold uppercase whitespace-nowrap"
                 style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)', letterSpacing: '0.2em' }}>
                 LIVE
               </div>
@@ -183,7 +183,7 @@ export default function Guestbook() {
                     {newMessage && (
                       <div className="mt-4 p-3 rounded-none text-left"
                         style={{ background: 'rgba(82,183,136,0.1)', border: '1px solid rgba(82,183,136,0.3)' }}>
-                        <div className="font-mono text-[9px] tracking-wider text-court-light uppercase">{newMessage.name}</div>
+                        <div className="font-mono text-[13px] tracking-wider text-court-light uppercase">{newMessage.name}</div>
                         <div className="font-body text-xs text-white/60 mt-1 italic">"{newMessage.message}"</div>
                       </div>
                     )}
@@ -197,7 +197,7 @@ export default function Guestbook() {
                     exit={{ opacity: 0 }}
                   >
                     <div>
-                      <label className="font-mono text-[9px] tracking-[0.3em] uppercase text-white/40 block mb-1.5">
+                      <label className="font-mono text-[13px] tracking-[0.3em] uppercase text-white/40 block mb-1.5">
                         Tên của bạn *
                       </label>
                       <input
@@ -211,7 +211,7 @@ export default function Guestbook() {
                       />
                     </div>
                     <div>
-                      <label className="font-mono text-[9px] tracking-[0.3em] uppercase text-white/40 block mb-1.5">
+                      <label className="font-mono text-[13px] tracking-[0.3em] uppercase text-white/40 block mb-1.5">
                         Lời chúc *
                       </label>
                       <textarea
@@ -223,7 +223,7 @@ export default function Guestbook() {
                         required
                         className="court-input w-full px-3 py-2.5 text-sm rounded-none resize-none"
                       />
-                      <div className="font-mono text-[8px] tracking-wider text-white/20 text-right mt-0.5">
+                      <div className="font-mono text-[11px] tracking-wider text-white/20 text-right mt-0.5">
                         {text.length}/200
                       </div>
                     </div>
@@ -281,15 +281,15 @@ export default function Guestbook() {
                   >
                     <div className="flex items-start justify-between gap-2 mb-1.5">
                       <div className="flex items-center gap-1.5">
-                        <div className="w-5 h-5 rounded-full flex items-center justify-center text-[9px] font-bold flex-shrink-0"
+                        <div className="w-5 h-5 rounded-full flex items-center justify-center text-[13px] font-bold flex-shrink-0"
                           style={{ background: 'rgba(82,183,136,0.2)', border: '1px solid rgba(82,183,136,0.4)', color: '#52b788' }}>
                           {msg.name.charAt(0).toUpperCase()}
                         </div>
-                        <div className="font-mono text-[9px] tracking-wider font-bold text-court-light uppercase truncate">
+                        <div className="font-mono text-[13px] tracking-wider font-bold text-court-light uppercase truncate">
                           {msg.name}
                         </div>
                       </div>
-                      <div className="font-mono text-[8px] text-white/25 flex-shrink-0">{msg.time}</div>
+                      <div className="font-mono text-[11px] text-white/25 flex-shrink-0">{msg.time}</div>
                     </div>
                     <p className="font-body text-xs text-white/60 leading-relaxed italic">
                       "{msg.message}"

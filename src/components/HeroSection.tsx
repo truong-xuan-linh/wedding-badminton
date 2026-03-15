@@ -141,8 +141,9 @@ export default function HeroSection() {
                     <Image
                       src="/2.webp"
                       alt={groom.name}
-                      width={112}
-                      height={112}
+                      width={224}
+                      height={224}
+                      quality={90}
                       className="w-full h-full object-cover object-top"
                     />
                   </div>
@@ -153,7 +154,7 @@ export default function HeroSection() {
                   </div>
                 </div>
                 <div className="text-center md:text-left">
-                  <div className="font-mono text-[9px] tracking-[0.3em] mb-0.5 uppercase"
+                  <div className="font-mono text-[13px] tracking-[0.3em] mb-0.5 uppercase"
                     style={{ color: '#52b788' }}>
                     {groom.position}
                   </div>
@@ -161,7 +162,7 @@ export default function HeroSection() {
                     style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.4rem, 4vw, 2.2rem)' }}>
                     {groom.name.split(' ')[0]}<br />{groom.name.split(' ').slice(1).join(' ')}
                   </div>
-                  <div className="font-mono text-[9px] tracking-wider mt-1"
+                  <div className="font-mono text-[13px] tracking-wider mt-1"
                     style={{ color: 'rgba(148,210,173,0.5)' }}>
                     {groom.nickname}
                   </div>
@@ -176,13 +177,13 @@ export default function HeroSection() {
               {/* CENTER SCORE */}
               <div className="flex flex-col items-center justify-center px-4 md:px-8 py-4"
                 style={{ borderLeft: '1px solid rgba(82,183,136,0.15)', borderRight: '1px solid rgba(82,183,136,0.15)' }}>
-                <div className="font-mono text-[9px] tracking-widest text-white/30 mb-2">SCORE</div>
+                <div className="font-mono text-[13px] tracking-widest text-white/30 mb-2">SCORE</div>
                 <div className="flex items-center gap-2">
                   <div className="led-text text-2xl md:text-4xl score-digit">21</div>
                   <div className="font-mono text-white/30">:</div>
                   <div className="led-text text-2xl md:text-4xl score-digit">21</div>
                 </div>
-                <div className="font-mono text-[9px] tracking-widest mt-2 mb-3"
+                <div className="font-mono text-[13px] tracking-widest mt-2 mb-3"
                   style={{ color: '#f59e0b' }}>
                   GAME OVER — BOTH WIN
                 </div>
@@ -202,8 +203,9 @@ export default function HeroSection() {
                     <Image
                       src="/1.webp"
                       alt={bride.name}
-                      width={112}
-                      height={112}
+                      width={224}
+                      height={224}
+                      quality={90}
                       className="w-full h-full object-cover object-top"
                     />
                   </div>
@@ -213,7 +215,7 @@ export default function HeroSection() {
                   </div>
                 </div>
                 <div className="text-center md:text-right">
-                  <div className="font-mono text-[9px] tracking-[0.3em] mb-0.5 uppercase"
+                  <div className="font-mono text-[13px] tracking-[0.3em] mb-0.5 uppercase"
                     style={{ color: '#f59e0b' }}>
                     {bride.position}
                   </div>
@@ -221,7 +223,7 @@ export default function HeroSection() {
                     style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.4rem, 4vw, 2.2rem)' }}>
                     {bride.name.split(' ')[0]}<br />{bride.name.split(' ').slice(1).join(' ')}
                   </div>
-                  <div className="font-mono text-[9px] tracking-wider mt-1"
+                  <div className="font-mono text-[13px] tracking-wider mt-1"
                     style={{ color: 'rgba(148,210,173,0.5)' }}>
                     {bride.nickname}
                   </div>
@@ -236,13 +238,13 @@ export default function HeroSection() {
             {/* Bottom bar — achievements */}
             <div className="px-4 py-2 flex items-center justify-between flex-wrap gap-2"
               style={{ background: 'rgba(7,26,14,0.8)', borderTop: '1px solid rgba(82,183,136,0.15)' }}>
-              <div className="font-mono text-[9px] tracking-wider text-white/30 flex-1 text-left">
+              <div className="font-mono text-[13px] tracking-wider text-white/30 flex-1 text-left">
                 🏆 {groom.stats.achievement}
               </div>
-              <div className="font-mono text-[9px] tracking-[0.2em] text-gold-light uppercase text-center">
+              <div className="font-mono text-[13px] tracking-[0.2em] text-gold-light uppercase text-center">
                 ♥ TOGETHER FOREVER ♥
               </div>
-              <div className="font-mono text-[9px] tracking-wider text-white/30 flex-1 text-right">
+              <div className="font-mono text-[13px] tracking-wider text-white/30 flex-1 text-right">
                 🏆 {bride.stats.achievement}
               </div>
             </div>
@@ -266,8 +268,8 @@ export default function HeroSection() {
                 }}
               >
                 <div className="text-lg mb-0.5">{item.icon}</div>
-                <div className="font-mono text-[9px] tracking-widest text-white/30 uppercase mb-0.5">{item.label}</div>
-                <div className="font-heading font-semibold text-xs md:text-sm tracking-wider text-court-light">{item.value}</div>
+                <div className="font-mono text-[10px] tracking-widest text-white/40 uppercase mb-0.5">{item.label}</div>
+                <div className="font-heading font-semibold text-sm md:text-base tracking-wider text-court-light">{item.value}</div>
               </div>
             ))}
           </div>
@@ -278,7 +280,7 @@ export default function HeroSection() {
           {...fadeUp(0.8)}
           className="mt-12 flex flex-col items-center gap-2"
         >
-          <div className="font-mono text-[9px] tracking-[0.4em] text-white/25 uppercase">Cuộn để xem</div>
+          <div className="font-mono text-[13px] tracking-[0.4em] text-white/25 uppercase">Cuộn để xem</div>
           <motion.div
             animate={{ y: [0, 6, 0] }}
             transition={{ duration: 1.5, repeat: Infinity }}
@@ -295,8 +297,8 @@ function StatPill({ label, value }: { label: string; value: string }) {
   return (
     <div className="flex items-center gap-1 px-2 py-0.5 rounded"
       style={{ background: 'rgba(26,71,42,0.6)', border: '1px solid rgba(82,183,136,0.2)' }}>
-      <span className="font-mono text-[8px] tracking-wider text-white/30">{label}</span>
-      <span className="font-mono text-[9px] text-court-light font-bold">{value}</span>
+      <span className="font-mono text-[11px] tracking-wider text-white/30">{label}</span>
+      <span className="font-mono text-[13px] text-court-light font-bold">{value}</span>
     </div>
   );
 }

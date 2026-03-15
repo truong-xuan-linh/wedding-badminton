@@ -49,25 +49,51 @@ export default function Footer() {
           </blockquote>
         </div>
 
+        {/* Creator credit */}
+        <div className="border-t border-court/20 pt-8 mb-6 text-center">
+          <div className="font-mono text-[10px] tracking-[0.35em] text-white/25 uppercase mb-3">
+            Website được thiết kế bởi
+          </div>
+          <div className="font-heading font-semibold text-base tracking-wider text-court-light/70 mb-3">
+            L&apos;Amour Link
+          </div>
+          <div className="flex items-center justify-center gap-5">
+            <a
+              href="https://www.facebook.com/profile.php?id=61579532994773"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-mono text-[10px] tracking-widest text-court-light/40 hover:text-court-light/80 uppercase transition-colors"
+            >
+              Facebook
+            </a>
+            <span className="text-court/30">·</span>
+            <a
+              href="https://www.instagram.com/lamourlink/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-mono text-[10px] tracking-widest text-court-light/40 hover:text-court-light/80 uppercase transition-colors"
+            >
+              Instagram
+            </a>
+            <span className="text-court/30">·</span>
+            <a
+              href="https://www.tiktok.com/@lamourlink"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-mono text-[10px] tracking-widest text-court-light/40 hover:text-court-light/80 uppercase transition-colors"
+            >
+              TikTok
+            </a>
+          </div>
+        </div>
+
         {/* Bottom bar */}
         <div className="border-t border-court/20 pt-6 flex flex-col md:flex-row items-center justify-between gap-3 text-center">
-          <div className="font-mono text-[9px] tracking-[0.3em] text-white/20 uppercase">
+          <div className="font-mono text-[13px] tracking-[0.3em] text-white/20 uppercase">
             The Championship Match · Wedding Series 2026
           </div>
 
-          {/* Social (mock) */}
-          <div className="flex items-center gap-4">
-            {['Instagram', 'Facebook'].map((s) => (
-              <button
-                key={s}
-                className="font-mono text-[9px] tracking-widest text-court-light/30 hover:text-court-light/70 uppercase transition-colors"
-              >
-                {s}
-              </button>
-            ))}
-          </div>
-
-          <div className="font-mono text-[9px] tracking-[0.3em] text-white/20 uppercase">
+          <div className="font-mono text-[13px] tracking-[0.3em] text-white/20 uppercase">
             Made with 🏸 & ❤️
           </div>
         </div>

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Anton, Oswald, Inter, Courier_Prime } from "next/font/google";
+import { Anton, Oswald, Inter, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 
 const anton = Anton({
@@ -10,18 +10,18 @@ const anton = Anton({
 
 const oswald = Oswald({
   variable: "--font-heading",
-  subsets: ["latin"],
+  subsets: ["latin", "vietnamese"],
   weight: ["300", "400", "500", "600", "700"],
 });
 
 const inter = Inter({
   variable: "--font-body",
-  subsets: ["latin"],
+  subsets: ["latin", "vietnamese"],
 });
 
-const courierPrime = Courier_Prime({
+const ibmPlexMono = IBM_Plex_Mono({
   variable: "--font-mono",
-  subsets: ["latin"],
+  subsets: ["latin", "vietnamese"],
   weight: ["400", "700"],
 });
 
@@ -44,7 +44,7 @@ export default function RootLayout({
   return (
     <html lang="vi">
       <body
-        className={`${anton.variable} ${oswald.variable} ${inter.variable} ${courierPrime.variable} antialiased`}
+        className={`${anton.variable} ${oswald.variable} ${inter.variable} ${ibmPlexMono.variable} antialiased`}
       >
         {children}
       </body>
