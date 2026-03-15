@@ -54,9 +54,14 @@ export default function Footer() {
           <div className="font-mono text-[10px] tracking-[0.35em] text-white/25 uppercase mb-3">
             Website được thiết kế bởi
           </div>
-          <div className="font-heading font-semibold text-base tracking-wider text-court-light/70 mb-3">
-            L&apos;Amour Link
-          </div>
+          <a
+            href="https://www.lamour.com.vn"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block font-heading font-semibold text-base tracking-wider text-court-light/70 hover:text-court-light transition-colors mb-3"
+          >
+            L&apos;Amour Link ↗
+          </a>
           <div className="flex items-center justify-center gap-5">
             <a
               href="https://www.facebook.com/profile.php?id=61579532994773"

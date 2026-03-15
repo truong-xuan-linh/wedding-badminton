@@ -12,6 +12,7 @@ import PhotoAlbum from './PhotoAlbum';
 import ShuttlecockMinigame from './ShuttlecockMinigame';
 import WeddingDetails from './WeddingDetails';
 import Guestbook from './Guestbook';
+import BadmintonGame from './BadmintonGame';
 import BackgroundMusic, { BackgroundMusicHandle } from './BackgroundMusic';
 import Footer from './Footer';
 
@@ -87,7 +88,10 @@ export default function MainContent({ guestName }: MainContentProps) {
               {/* 7. Wedding Details: Full info */}
               <WeddingDetails />
 
-              {/* 8. Guestbook: LED ticker + messages */}
+              {/* 8. Badminton Game: Who's the boss? */}
+              <BadmintonGame />
+
+              {/* 9. Guestbook: LED ticker + messages */}
               <Guestbook />
             </main>
 
