@@ -116,7 +116,7 @@ export default function AthletePass({ guestName }: AthletePassProps) {
                 <div className="mb-1">
                   <div className="font-mono text-[13px] tracking-widest uppercase mb-1"
                     style={{ color: 'rgba(148,210,173,0.5)' }}>
-                    Kính Gửi
+                    Kính Mời
                   </div>
                   <motion.div
                     initial={{ opacity: 0, x: -20 }}
