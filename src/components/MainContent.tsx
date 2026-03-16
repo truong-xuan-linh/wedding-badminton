@@ -2,7 +2,7 @@
 
 import { useState, useRef } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import IntroAnimation from './IntroAnimation';
+import WeddingInvitation from './WeddingInvitation';
 import NavBar from './NavBar';
 import HeroSection from './HeroSection';
 import AthletePass from './AthletePass';
@@ -44,10 +44,10 @@ export default function MainContent({ guestName }: MainContentProps) {
 
   return (
     <>
-      {/* Intro Animation */}
+      {/* Wedding Invitation Onboarding */}
       <AnimatePresence>
         {!introComplete && (
-          <IntroAnimation onComplete={handleIntroComplete} />
+          <WeddingInvitation guestName={guestName} onComplete={handleIntroComplete} />
         )}
       </AnimatePresence>
 
